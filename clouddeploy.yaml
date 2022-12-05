@@ -1,0 +1,19 @@
+---
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: DeliveryPipeline
+metadata:
+  name: python-deployment-1
+description: Testing for cloud-deploy  
+serialPipeline:
+  stages:
+  - targetId: production
+
+---
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+  name: production
+description: Python Production Environment
+gke:
+  cluster: projects/adroit-nimbus-370411/locations/us-central1/clusters/kpt-tech
+  
