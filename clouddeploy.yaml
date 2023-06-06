@@ -15,5 +15,5 @@ metadata:
   name: production
 description: Python Production Environment
 gke:
-  cluster: projects/adroit-nimbus-370411/locations/us-central1/clusters/kpt-tech
+  cluster: projects/$PROJECT_ID/locations/us-central1/clusters/kpt-tech
   
