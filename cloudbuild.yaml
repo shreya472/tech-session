@@ -6,7 +6,7 @@ steps:
       "--dockerfile=dockerfile",
       "--cache=true",
       "--cache-ttl=6h",
-      "--destination=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${COMMIT_SHA}"
+      "--destination=us-central1-docker.pkg.dev/$PROJECT_ID/tech/kpt-image:${COMMIT_SHA}"
     ]
 
 
@@ -33,7 +33,7 @@ steps:
       "--delivery-pipeline", "kpt-tech",
       "--region", "us-central1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "python-deployment=us-central1-docker.pkg.dev/adroit-nimbus-370411/tech/kpt-image:${COMMIT_SHA}"
+      "--images", "python-deployment=us-central1-docker.pkg.dev/$PROJECT_ID/tech/kpt-image:${COMMIT_SHA}"
     ]
 options:
  logging: CLOUD_LOGGING_ONLY
